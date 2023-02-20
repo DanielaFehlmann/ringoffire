@@ -1,5 +1,5 @@
 export class Game {
-  public players: string[] = [];
+  public players: string[] = ['OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO','OOOOOOOOOOOO'];
   public stack: string[] = []; //ungespielte Karten
   public playedCards: string[] = [];
   public currentPlayer: number = 0;

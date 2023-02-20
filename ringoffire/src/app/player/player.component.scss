@@ -12,7 +12,7 @@
     object-fit: cover;
     border-radius: 100%;
     margin-left: 15px;
-    background-color: #552200;
+    background-color: #165b9d;
   }
   span {
     font-size: 22px;
@@ -23,4 +23,56 @@
 .playerActive {
  background-color:rgb(244,67,54, 0.7);
  width: 300px;
+}
+
+
+@media (max-width: 900px) {
+  .player {
+    width: 230px;
+    span {
+      font-size: 18px;
+    }
+  }
+  .playerActive {
+    width: 260px;
+   }
+}
+
+@media (max-width: 580px) {
+  .player {
+    height: 45px;
+    width: 195px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    img {
+      height: 35px;
+      width: 35px;
+      margin-left: 5px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  .playerActive {
+    width: 215px;
+   }
+}
+
+@media (max-width: 430px) {
+  .player {
+    height: 40px;
+    width: 150px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+  .playerActive {
+    width: 180px;
+   }
 }

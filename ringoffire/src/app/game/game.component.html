@@ -1,8 +1,10 @@
 <!--Komponente Game bindet die Komponente Player ein-->
 <!--Variable "name" reingeben, Variable "name" an diese Unterkomponente übergeben-->
 <!--wenn i == game.currentPlayer, dann ist playerActive true-->
-<app-player class="positionAbsolute" [ngStyle]="{'top.px': 50 + i*70}" *ngFor="let player of game.players; let i = index;" [name]="player" [playerActive]="i == game.currentPlayer">
-</app-player>
+<div class="allPlayers">
+  <app-player class="positionRelative" [ngStyle]="{'top.px': 50 + i*20}" *ngFor="let player of game.players; let i = index;" [name]="player" [playerActive]="i == game.currentPlayer">
+  </app-player>
+</div>
 
 
 <div class="board">
