@@ -1,0 +1,65 @@
+.board {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  height: 100vH;
+  width: 100vW;
+  max-width: 100%;
+  background-image: url('/assets/img/board.jpg');
+}
+.deckOfCards {
+  position: absolute;
+  left: calc(50% - 73.5px);
+  top: calc(50% - 115px);
+
+  img {
+    position: absolute;
+    height: 230px;
+    rotate: 10deg;
+  }
+}
+
+.topCard {
+  cursor: pointer;
+  transition: transform 100ms ease-in-out ;
+
+  &:hover {
+    transform: scale(1.05) translateY(-5px);
+  }
+}
+.playedCard {
+  transform: scale(1.1) translateY(-163px) translateX(-486px) rotate(-18deg);
+}
+
+.pickCard {
+  // transition: all 1000ms ease-in-out ;
+  animation: pickCardAnimation 1.5s ease-in-out;
+  transform: scale(1.1) translateY(-180px) translateX(-480px) rotate(-16deg);
+}
+
+@keyframes pickCardAnimation {
+  0% {
+    transform: scale(1.05);
+  }
+  30% {
+    transform: scale(1.7);
+  }
+  40% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1.1) translateY(-180px) translateX(-480px) rotate(-16deg);
+  }
+}
+
+.positionAbsolute {
+  position: absolute;
+  right: 0;
+}
+
+.buttonAdd {
+  position: absolute;
+  bottom: 20px;
+  right: 205px;
+}
+
