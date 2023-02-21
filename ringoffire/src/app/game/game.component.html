@@ -11,13 +11,13 @@
 
   <div class="deckOfCards">
     <!--4x das Bild hinzufügen, beim 1. Bild ist i = 0, beim 2. Bild ist i = 1 usw.-->
-    <img [ngStyle]="{'rotate.deg': i*2}" *ngFor="let card of [0,1,2,3]; let i = index;" src="/assets/img/cards/card_cover.png">
+    <img [ngStyle]="{'rotate.deg': i*2}" *ngFor="let card of [0,1,2,3]; let i = index;" src="./assets/img/cards/card_cover.png">
     <!--oberste Karte-->
-    <img (click)="takeCard()" class="topCard" style="rotate: 8deg" src="/assets/img/cards/card_cover.png">
+    <img (click)="takeCard()" class="topCard" style="rotate: 8deg" src="./assets/img/cards/card_cover.png">
     <!--played Cards-->
-    <img class="playedCard" *ngFor="let card of game.playedCards" src="/assets/img/cards/{{ card }}.png">
+    <img class="playedCard" *ngFor="let card of game.playedCards" src="./assets/img/cards/{{ card }}.png">
     <!--wenn pickCardAnimation = true, dann zeige das Bild an-->
-    <img class="pickCard" *ngIf="pickCardAnimation" style="rotate: 8deg" src="/assets/img/cards/{{ currentCard }}.png">
+    <img class="pickCard" *ngIf="pickCardAnimation" style="rotate: 8deg" src="assets/img/cards/{{ currentCard }}.png">
   </div>
   
 </div>
@@ -27,3 +27,4 @@
 </button>
 
 <app-game-info [card]="currentCard"></app-game-info>
+<div *ngFor="let game of games">{{game['game']}}</div>

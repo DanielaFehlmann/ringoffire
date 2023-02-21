@@ -15,9 +15,16 @@ export class Game {
   }
   //constructor ist eine Funktion wird immer am Anfang aufgerufen
   //in dieser Funktion kann man gewisse Logik aufrufen
+
+  public toJson() {
+    return {
+      players: this.players,
+      stack: this.stack,
+      playedCards: this.playedCards,
+      currentPlayer: this.currentPlayer
+    };
+  }
 }
-//alle Felder die wir verwenden wollen
-//public, damit man von überall darauf zugreifen kann
 
 
 function shuffle(array) {
