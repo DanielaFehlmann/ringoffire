@@ -4,10 +4,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { Game } from 'src/models/game'; //Game importieren, um darauf zuzugreifen
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 
-import { addDoc, collectionData, doc, Firestore, setDoc, getDoc, getFirestore } from '@angular/fire/firestore';
+import { addDoc, collectionData, doc, Firestore, setDoc, getDoc, getFirestore, docData } from '@angular/fire/firestore';
 import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { initializeApp } from '@angular/fire/app';
 
 
 @Component({
@@ -18,10 +19,12 @@ import { ActivatedRoute } from '@angular/router';
 export class GameComponent implements OnInit{
   pickCardAnimation = false;
   currentCard: string = '';
-  game: Game; //Variable game vom Typ Game
+  game: Game;
   games$: Observable<any>;
   games: Array<any>[];
-  
+  id: string;
+
+
   constructor(private route: ActivatedRoute, public dialog: MatDialog, private firestore: Firestore) {
     
   }
@@ -30,21 +33,19 @@ export class GameComponent implements OnInit{
   ngOnInit() {
     this.newGame();
     this.route.params.subscribe((params) => {
-      console.log(params['id']);
-      const coll = collection(this.firestore, 'games');
-      this.games$ = collectionData(coll);
-      this.games$.subscribe(async (gameUpdate) => {
-      this.games = gameUpdate;
-      console.log(gameUpdate);
-    })
+      this.id = params['id'];
+      const docRef = doc(this.firestore,"games",this.id);
+      this.games$.subscribe(async () => {
+        const docSnap = await getDoc(docRef);
+      })
+      
     })
   }
 
 
   newGame() {
-    this.game = new Game(); //Variable "game" bekommt ein neues Objekt erstellt //es wird ein JSON-Objekt mit all den Eigenschaften von "Game" erstellt
-    const coll = collection(this.firestore, 'games');
-    addDoc(coll, {game: this.game.toJson()});
+    this.game = new Game();
+    // addDoc(this.coll, {game: this.game.toJson()});
   }
 
 
