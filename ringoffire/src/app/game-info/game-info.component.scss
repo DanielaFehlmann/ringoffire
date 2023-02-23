@@ -7,42 +7,60 @@
 .cardTitle {
   padding-left: 16px;
   padding-right: 16px;
+  text-align: center;
 }
 
 
 @media (max-width: 750px) {
   .card {
-    width: 400px;
-    left: calc(50% - 200px);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100px;
+  }
+  .cardDescription {
+    padding-right: 100px;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 390px) {
   .card {
-    width: 300px;
-    left: calc(50% - 150px);
-  }
-}
-
-@media (max-width: 550px) {
-  .card {
-    left: 8%;
-    background-color: rgba(255, 255, 255, 0.644);
-    width: 200px;
+    max-height: 100px;
     overflow: auto;
   }
-}
-
-@media (max-width: 460px) {
-  .card {
-    width: 250px;
+  .cardDescription {
+    font-size: 12px;
+    padding-right: 68px;
   }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 300px) {
   .card {
-    width: 190px;
-    left: 4%;
-    bottom: 15px;
+    max-height: 100px;
+    overflow: auto;
   }
+  .cardTitle {
+    font-size: 14px;
+  }
+  .cardDescription {
+    font-size: 12px;
+    padding-right: 68px;
+  }
+}
+
+@media (max-height: 300px) {
+  .card {
+    min-height: 80px;
+    max-height: 80px;
+  }
+  .cardTitle {
+    font-size: 14px;
+  }
+  .cardDescription {
+    font-size: 12px;
+    padding-right: 68px;
+  }
+  .mat-mdc-card-content:last-child {
+    padding-bottom: 5px;
+}
 }

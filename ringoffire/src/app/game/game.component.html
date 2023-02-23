@@ -2,7 +2,7 @@
 <!--Variable "name" reingeben, Variable "name" an diese Unterkomponente übergeben-->
 <!--wenn i == game.currentPlayer, dann ist playerActive true-->
 <div class="allPlayers">
-  <app-player class="positionRelative" [ngStyle]="{'top.px': 50 + i*20}" *ngFor="let player of game.players; let i = index;" [name]="player" [playerActive]="i == game.currentPlayer">
+  <app-player class="positionRelative" [ngStyle]="{'top.px': i*20}" *ngFor="let player of game.players; let i = index;" [name]="player" [playerActive]="i == game.currentPlayer">
   </app-player>
 </div>
 
@@ -17,7 +17,7 @@
     <!--played Cards-->
     <img class="playedCard" *ngFor="let card of game.playedCards" src="./assets/img/cards/{{ card }}.png">
     <!--wenn pickCardAnimation = true, dann zeige das Bild an-->
-    <img class="pickCard" *ngIf="pickCardAnimation" style="rotate: 8deg" src="assets/img/cards/{{ currentCard }}.png">
+    <img class="pickCard" *ngIf="this.game.pickCardAnimation" style="rotate: 8deg" src="assets/img/cards/{{ this.game.currentCard }}.png">
   </div>
   
 </div>
@@ -26,5 +26,5 @@
   <mat-icon>add</mat-icon>
 </button>
 
-<app-game-info [card]="currentCard"></app-game-info>
+<app-game-info [card]="this.game.currentCard"></app-game-info>
 <div *ngFor="let game of games">{{game['game']}}</div>

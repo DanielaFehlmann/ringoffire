@@ -5,7 +5,7 @@ import { StartscreenComponent } from './startscreen/startscreen.component';
 
 const routes: Routes = [
   {path: '', component: StartscreenComponent},
-  {path: 'game/:id', component: GameComponent}, //diese Route verfügt über eine
+  {path: 'game/:id', component: GameComponent},
 ];
 
 @NgModule({
