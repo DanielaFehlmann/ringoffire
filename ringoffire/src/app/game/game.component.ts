@@ -62,8 +62,6 @@ export class GameComponent implements OnInit{
 
 
   takeCard() {
-    this.game.stack.length = 0;
-    console.log(this.game.stack.length);
     if (this.game.pickCardAnimation == false && this.game.players.length > 0 && this.game.stack.length > 0) {
     this.game.currentCard = this.game.stack.pop(); //pop -> man bekommt den letzten Wert aus dem array und gleichzeitig wird es aus dem array entfernt
     this.game.pickCardAnimation = true;
@@ -77,7 +75,6 @@ export class GameComponent implements OnInit{
     }, 1500);
   } else if (this.game.stack.length == 0) {
     this.gameIsOver();
-    console.log('stack empty');
   }
   }
 
