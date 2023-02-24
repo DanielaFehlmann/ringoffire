@@ -22,7 +22,7 @@ export class GameComponent implements OnInit{
   games: Array<any>[];
   id: string;
   coll: any;
-
+  gameOver = false;
 
   constructor(private route: ActivatedRoute, public dialog: MatDialog, private firestore: Firestore) {
     
@@ -62,7 +62,9 @@ export class GameComponent implements OnInit{
 
 
   takeCard() {
-    if (this.game.pickCardAnimation == false && this.game.players.length > 0 ) {
+    this.game.stack.length = 0;
+    console.log(this.game.stack.length);
+    if (this.game.pickCardAnimation == false && this.game.players.length > 0 && this.game.stack.length > 0) {
     this.game.currentCard = this.game.stack.pop(); //pop -> man bekommt den letzten Wert aus dem array und gleichzeitig wird es aus dem array entfernt
     this.game.pickCardAnimation = true;
     this.game.currentPlayer++;
@@ -73,9 +75,17 @@ export class GameComponent implements OnInit{
       this.game.playedCards.push(this.game.currentCard);
       this.saveGame();
     }, 1500);
+  } else if (this.game.stack.length == 0) {
+    this.gameIsOver();
+    console.log('stack empty');
   }
   }
 
+
+  gameIsOver() {
+    this.gameOver = true;
+    console.log(this.gameOver);
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
@@ -87,6 +97,4 @@ export class GameComponent implements OnInit{
       }
     });
   }
-
-
 }

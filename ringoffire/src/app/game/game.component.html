@@ -22,9 +22,13 @@
   
 </div>
 
-<button class="buttonAdd" mat-fab color="warn" (click)="openDialog()">
+<button class="buttonAdd" mat-fab color="warn" (click)="openDialog()" [disabled]="gameOver">
   <mat-icon>add</mat-icon>
 </button>
 
 <app-game-info [card]="this.game.currentCard"></app-game-info>
+
 <div *ngFor="let game of games">{{game['game']}}</div>
+
+<app-gameover *ngIf="gameOver">
+</app-gameover>
