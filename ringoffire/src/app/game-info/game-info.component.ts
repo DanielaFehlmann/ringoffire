@@ -8,19 +8,19 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 export class GameInfoComponent implements OnChanges{
   cardAction = [
-    { title: 'Waterfall', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'You', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Me', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Category', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Bust a jive', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Chicks', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Heaven', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Mate', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Thumbmaster', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Guys', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Quizmaster', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Never have i ever...', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
-    { title: 'Rule', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
+    { title: 'Waterfall', description: 'Each player starts drinking at the same time as the person to their left. NO player can stop drinking until the person before them stops' },
+    { title: 'You', description: 'Choose who you want to take a drink' },
+    { title: 'Me', description: 'You yourself take a drink' },
+    { title: 'Floor', description: 'Last person to touch the floor drinks' },
+    { title: 'Guys', description: 'All men drink' },
+    { title: 'Chicks', description: 'All women drink' },
+    { title: 'Heaven', description: 'Last one to put their hands in the air drinks' },
+    { title: 'Mate', description: 'Choose a mate. Whenever you drink, they drink, and vice versa. If your mate already has a mate, you are now one long mate chain' },
+    { title: 'Rhyme', description: 'Choose a word and go around the circle coming up with words that rhyme with that word. If someone gets stuck, they drink, and the turn is over' },
+    { title: 'categories', description: 'Choose a category (e.g.: car brands) - everyone must name something that falls within the category'},
+    { title: 'Questionmaster', description: 'You are the question master. If someone answers to your questions they have to drink' },
+    { title: 'Never have i ever...', description: 'Start a game of never have I ever' },
+    { title: 'Rule', description: 'Make a rule  everyone has to follow. If they do not they have to drink' },
   ];
 
   title = '';

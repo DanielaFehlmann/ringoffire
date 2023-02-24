@@ -75,9 +75,12 @@ export class GameComponent implements OnInit{
       this.game.playedCards.push(this.game.currentCard);
       this.saveGame();
     }, 1500);
-  } else if (this.game.stack.length == 0) {
-    this.gameIsOver();
-  }
+    } else if (this.game.stack.length == 0) {
+    this.gameOver = true;
+    this.saveGame();
+    } else if (this.game.players.length == 0) {
+      this.openDialog();
+    }
   }
 
 
@@ -94,12 +97,6 @@ export class GameComponent implements OnInit{
       this.saveGame();
       }
     });
-  }
-
-
-  gameIsOver() {
-    this.gameOver = true;
-    console.log(this.gameOver);
   }
 
 
