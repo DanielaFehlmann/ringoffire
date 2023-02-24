@@ -10,7 +10,6 @@ import { Game } from 'src/models/game';
 export class PlayerComponent {
   @Input() name;
   @Input() playerActive: boolean = false;
-
-  
+  @Input() color;
 }
 

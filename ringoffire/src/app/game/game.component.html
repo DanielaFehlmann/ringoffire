@@ -2,7 +2,7 @@
 <!--Variable "name" reingeben, Variable "name" an diese Unterkomponente übergeben-->
 <!--wenn i == game.currentPlayer, dann ist playerActive true-->
 <div class="allPlayers">
-  <app-player class="positionRelative" [ngStyle]="{'top.px': i*20}" *ngFor="let player of game.players; let i = index;" [name]="player" [playerActive]="i == game.currentPlayer">
+  <app-player (click)="editPlayer(i)" class="positionRelative" [color]="game.colors[i]" [ngStyle]="{'top.px': i*20}" *ngFor="let player of game.players; let i = index;" [name]="player" [playerActive]="i == game.currentPlayer">
   </app-player>
 </div>
 
@@ -30,5 +30,4 @@
 
 <div *ngFor="let game of games">{{game['game']}}</div>
 
-<app-gameover *ngIf="gameOver">
-</app-gameover>
+<app-gameover *ngIf="gameOver"></app-gameover>

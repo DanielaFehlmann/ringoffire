@@ -9,6 +9,7 @@ import { collection } from '@firebase/firestore';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { initializeApp } from '@angular/fire/app';
+import { EditPlayerComponent } from '../edit-player/edit-player.component';
 
 
 @Component({
@@ -39,10 +40,11 @@ export class GameComponent implements OnInit{
         let docRef = doc(this.firestore,"games",this.id);
         let docSnap = await getDoc(docRef);
         let data = await docSnap.data();
-        this.game.currentPlayer = data['currentPlayer'];
-        this.game.playedCards = data['playedCards'];
         this.game.players = data['players'];
+        this.game.colors = data['colors'];
         this.game.stack = data['stack'];
+        this.game.playedCards = data['playedCards'];
+        this.game.currentPlayer = data['currentPlayer'];
         this.game.pickCardAnimation = data['pickCardAnimation'];
         this.game.currentCard = data['currentCard'];
       })
@@ -79,10 +81,27 @@ export class GameComponent implements OnInit{
   }
 
 
+  editPlayer(playerId: number) {
+    const dialogRef = this.dialog.open(EditPlayerComponent);
+    dialogRef.afterClosed().subscribe((change:string) => {
+      if (change) {
+        if (change == 'delete') {
+          this.game.players.splice(playerId, 1);
+          this.game.colors.splice(playerId, 1);
+        } else {
+          this.game.colors[playerId] = change; 
+        }
+      this.saveGame();
+      }
+    });
+  }
+
+
   gameIsOver() {
     this.gameOver = true;
     console.log(this.gameOver);
   }
+
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
@@ -90,8 +109,11 @@ export class GameComponent implements OnInit{
     dialogRef.afterClosed().subscribe((name:string) => {
       if (name) {
         this.game.players.push(name);
+        this.game.colors.push('rgb(130,122,119)');
         this.saveGame();
       }
     });
   }
+
+
 }

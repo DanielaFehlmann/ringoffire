@@ -7,15 +7,20 @@
   background-color: rgba(88, 88, 88, 0.7);
   border-top-left-radius: 60px;
   border-bottom-left-radius: 60px;
+  cursor: pointer;
+  transition: filter 125ms ease-in-out;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
   img {
     height: 40px;
     width: 40px;
     object-fit: cover;
     border-radius: 100%;
     margin-left: 15px;
-    background-color: #165b9d;
     z-index: 10;
-    cursor: pointer;
   }
 
   span {

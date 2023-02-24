@@ -24,6 +24,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { GameoverComponent } from './gameover/gameover.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { GameoverComponent } from './gameover/gameover.component';
     DialogAddPlayerComponent,
     GameInfoComponent,
     GameoverComponent,
+    EditPlayerComponent,
   ],
   imports: [
     BrowserModule,
