@@ -6,6 +6,7 @@
   width: 400px;
   animation: gameOver 500ms ease-in-out;
 }
+
 .imageCard {
   height: 100%;
   width: 100%;
@@ -18,6 +19,7 @@
     height: 0px;
     width: 0px;
   }
+
   100% {
     top: calc(50% - 300px);
     left: calc(50% - 200px);
@@ -48,6 +50,7 @@
     height: 0px;
     width: 0px;
   }
+
   100% {
     top: calc(90% - 50px);
     left: calc(70% - 45px);
@@ -55,14 +58,6 @@
     width: 90px;
   }
 }
-
-
-
-
-
-
-
-
 
 @media (max-width: 700px) {
   .card {
@@ -76,6 +71,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(50% - 300px);
       left: calc(50% - 200px);
@@ -84,15 +80,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 580px) {
   .card {
@@ -106,6 +93,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(50% - 300px);
       left: calc(50% - 200px);
@@ -114,15 +102,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 430px) {
   .card {
@@ -140,6 +119,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(50% - 200px);
       left: calc(50% - 135px);
@@ -163,6 +143,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(90% - 32.5px);
       left: calc(70% - 25px);
@@ -171,20 +152,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-height: 600px) {
   .card {
@@ -202,6 +169,7 @@
       height: 0px;
       width: 0px;
     }
+    
     100% {
       top: calc(50% - 200px);
       left: calc(50% - 135px);
@@ -225,6 +193,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(90% - 32.5px);
       left: calc(70% - 25px);
@@ -233,7 +202,6 @@
     }
   }
 }
-
 
 @media (max-height: 450px) {
   .card {
@@ -251,6 +219,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(50% - 200px);
       left: calc(50% - 135px);
@@ -259,7 +228,6 @@
     }
   }
 }
-
 
 @media (max-height: 400px) {
   .card {
@@ -277,6 +245,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(50% - 130px);
       left: calc(50% - 90px);
@@ -300,6 +269,7 @@
       height: 0px;
       width: 0px;
     }
+
     100% {
       top: calc(90% - 25px);
       left: calc(70% - 20px);
@@ -308,9 +278,3 @@
     }
   }
 }
-
-
-
-
-
-

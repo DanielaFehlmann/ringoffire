@@ -6,6 +6,7 @@ export class Game {
   public currentPlayer: number = 0;
   public pickCardAnimation = false;
   public currentCard: string = '';
+  public gameOver = false;
 
 
   constructor() {
@@ -27,7 +28,8 @@ export class Game {
       playedCards: this.playedCards,
       currentPlayer: this.currentPlayer,
       pickCardAnimation: this.pickCardAnimation,
-      currentCard: this.currentCard
+      currentCard: this.currentCard,
+      gameOver: this.gameOver
     };
   }
 }

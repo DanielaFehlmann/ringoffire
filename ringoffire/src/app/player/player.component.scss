@@ -34,6 +34,7 @@
  width: 300px;
  z-index: 1000 !important;
 }
+
 .d-none {
   display: none;
 }
@@ -41,10 +42,12 @@
 @media (max-width: 900px) {
   .player {
     width: 230px;
+
     span {
       font-size: 18px;
     }
   }
+
   .playerActive {
     width: 260px;
    }
@@ -56,15 +59,18 @@
     width: 195px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+
     img {
       height: 35px;
       width: 35px;
       margin-left: 5px;
     }
+
     span {
       font-size: 16px;
     }
   }
+
   .playerActive {
     width: 215px;
    }
@@ -76,14 +82,17 @@
     width: 150px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+
     img {
       height: 30px;
       width: 30px;
     }
+
     span {
       font-size: 12px;
     }
   }
+
   .playerActive {
     width: 180px;
    }
@@ -95,15 +104,18 @@
     width: 135px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+
     img {
       height: 25px;
       width: 25px;
     }
+
     span {
       font-size: 11px;
       margin-left: 5px;
     }
   }
+
   .playerActive {
     width: 150px;
    }
@@ -115,15 +127,18 @@
     width: 195px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+
     img {
       height: 35px;
       width: 35px;
       margin-left: 5px;
     }
+
     span {
       font-size: 16px;
     }
   }
+
   .playerActive {
     width: 215px;
    }
@@ -135,14 +150,17 @@
     width: 150px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+
     img {
       height: 30px;
       width: 30px;
     }
+
     span {
       font-size: 12px;
     }
   }
+
   .playerActive {
     width: 180px;
    }
@@ -154,15 +172,18 @@
     width: 135px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+
     img {
       height: 25px;
       width: 25px;
     }
+
     span {
       font-size: 11px;
       margin-left: 5px;
     }
   }
+  
   .playerActive {
     width: 150px;
    }

@@ -28,7 +28,6 @@ export class GameInfoComponent implements OnChanges{
   @Input() card: string;
 
 
-  //wird immer aufgerufen, wenn wir die Input-Variable ändern
   ngOnChanges(): void {
     if (this.card) {
       let cardNumber = +this.card.split('_')[1];
@@ -36,4 +35,6 @@ export class GameInfoComponent implements OnChanges{
       this.description = this.cardAction[cardNumber -1].description;
     }
   }
+
+  
 }

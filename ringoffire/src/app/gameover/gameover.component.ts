@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './gameover.component.html',
   styleUrls: ['./gameover.component.scss']
 })
+
 export class GameoverComponent {
   playAgain() {
     window.location.href= '';
